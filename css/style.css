@@ -56,6 +56,7 @@ header{
 	max-width: 1200px;
 	width: 100%;
 	padding: 0;
+	
 	margin: 0 auto;
 }
 .bg{
@@ -187,6 +188,7 @@ footer{
 		text-align: center;
 	}
 	.formcontainer{
+		margin-top: 8px;
 		position: static;
 		display: inline-block;
 		margin-right: 0;
