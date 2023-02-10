@@ -59,20 +59,20 @@ header{
 	margin: 0 auto;
 }
 .bg{
+	position: relative;
 	background-image: url(../imagens/bg-form.jpg);
-	height: 500px;
+	height: 560px;
 	background-size: cover;
 	background-position: center;
 }
 .formcontainer{
-	z-index: 2;
+	position: absolute;
 	margin-right: 40px;
-	float: right;
+	top: -2.5%;
+	right: 30px;
 	width: 400px;
-	height: 110%;
+	height: 105%;
 	box-shadow: 1px 1px 1px rgb(94, 59, 59);
-	top: -15px;
-	position: relative;
 	background-color: rgba(159, 165, 109, 0.692);
 }
 .formcontainer h2{
@@ -130,10 +130,7 @@ form input[type=button]:hover{
 }
 .chamada {
 	max-width: 1200px;
-	z-index: 1;
 	display: block;
-	position: relative;
-	top: -50px;
 	width: 100%;
 	text-align: center;
 	margin: 0 auto;
@@ -159,7 +156,55 @@ form input[type=button]:hover{
 .chamada .container p{
 	text-shadow: 1px 1px 6px red;
 	font-weight: bold;
+	padding-top: 20px;
 
+}
+.flexmosaico{
+	display: flex;
+}
+.flexmosaico .item1{
+	background-position: center;
+	background-size: cover;
+	width: 60%;
+}
+.item2{
+	padding: 40px;
+	width: 40%;
+	background: rgb(121,91,9);
+	background: -moz-linear-gradient(90deg, rgba(121,91,9,1) 38%, rgba(230,255,0,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(121,91,9,1) 38%, rgba(230,255,0,1) 100%);
+	background: linear-gradient(90deg, rgba(121,91,9,1) 38%, rgba(230,255,0,1) 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#795b09",endColorstr="#e6ff00",GradientType=1);
+}
+footer{
+	width: 100%;
+	background-color: #723f3f;
+	padding: 16px;
+	text-align: center;
+}
+@media screen and (max-width: 960px) {
+	.bg{
+		text-align: center;
+	}
+	.formcontainer{
+		position: static;
+		display: inline-block;
+		margin-right: 0;
+		height: auto;
+	}
+}
+@media screen and (max-width: 768px) {
+	.flexmosaico{
+		display: block;
+	}
+	.flexmosaico .item1{
+		width: 100%;
+		padding-top: 80%;
+	}
+	.item2{
+		width: 100%;
+		text-align: justify;
+	}
 }
 @media screen and (max-width: 510px){
 
@@ -171,6 +216,15 @@ form input[type=button]:hover{
 		margin-top:10px;
 		display: inline-block;
 		float: none;
+	}
+	.bg{
+		text-align: center;
+	}
+	.formcontainer{
+		position: static;
+		display: inline-block;
+		margin-right: 0;
+		height: auto;
 	}
 
 
